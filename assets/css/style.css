@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#container {
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+    display: flex;
+}
+
+.partition {
+    flex: 1;
+    display: flex;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.partition .buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.partition .split-v,
+.partition .split-h,
+.partition .remove {
+    margin: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.partition.resizable {
+    resize: both;
+    overflow: auto;
+}
+
+.partition.resizable .remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
